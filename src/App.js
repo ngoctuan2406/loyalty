@@ -2,23 +2,27 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import AddToHomeScreen from './addto/AddToHomeScreen';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        kkkkkkk1  
+      <AddToHomeScreen
+            appId='add-to-homescreen-react'
+            startAutomatically={ true }
+            startDelay={ 0 }
+            lifespan={ 30 }
+            // skipFirstVisit={ true }
+            displayPace={ 0 }
+            customPromptContent={ {
+              title: 'Do you want to install Add-to-homescreen React Modified Behavior Example on your homescreen?',
+              cancelMsg: 'No',
+              installMsg: 'Yes, sure!',
+              guidanceCancelMsg: 'Dismiss',
+              src: 'images/ExampleLogo.png'
+            } }
+        />
+      {/* </body> */}
     </div>
   );
 }
